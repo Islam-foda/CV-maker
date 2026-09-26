@@ -1,6 +1,6 @@
 // import React from 'react'
 
-export default function BasicInfo({ data, onEdit }) {
+export default function BasicInfo({ data }) {
 
 
   return (
@@ -11,9 +11,7 @@ export default function BasicInfo({ data, onEdit }) {
       </p>
       <p>email: {data.email}</p>
       <p>tel: {data.mobile}</p>
-      <button type="button" onClick={onEdit} className="secondary">
-        Edit
-      </button>
+     
     </>
   );
 }

@@ -97,9 +97,9 @@ export default function UserForm({ initialValues, onSubmit, onCancel }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="field">
-      <div>
-        <label htmlFor="firstName">First name</label>
+    <form onSubmit={handleSubmit} noValidate >
+      <div className="field">
+        <label htmlFor="firstName" >First name</label>
         <input
           id="firstName"
           name="firstName"
@@ -119,8 +119,8 @@ export default function UserForm({ initialValues, onSubmit, onCancel }) {
         )}
       </div>
 
-      <div >
-        <label htmlFor="lastName">Last name</label>
+      <div className="field">
+        <label htmlFor="lastName" >Last name</label>
         <input
           id="lastName"
           name="lastName"
@@ -140,7 +140,7 @@ export default function UserForm({ initialValues, onSubmit, onCancel }) {
         )}
       </div>
 
-      <div>
+      <div className="field">
         <label htmlFor="email">Email address</label>
         <input
           id="email"
@@ -162,7 +162,7 @@ export default function UserForm({ initialValues, onSubmit, onCancel }) {
         )}
       </div>
 
-      <div>
+      <div className="field">
         <label htmlFor="mobile">Mobile number</label>
         <input
           id="mobile"
@@ -186,7 +186,7 @@ export default function UserForm({ initialValues, onSubmit, onCancel }) {
 
       <div className="actions">
         <button type="submit">
-          {isEditMode ? "Save changes" : "Create account"}
+          {isEditMode ? "Save changes" : "Create CV"}
         </button>
 
         {isEditMode && onCancel && (

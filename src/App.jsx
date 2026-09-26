@@ -16,14 +16,14 @@ function App() {
   };
 
   const handleCancel = () => {
-    setEditing(false); 
+    setEditing(false);
   };
 
   return (
     <>
       {editing && (
         <UserForm
-          initialValues={formData} 
+          initialValues={formData}
           onSubmit={handleSubmit}
           onCancel={formData ? handleCancel : undefined}
           editing
@@ -31,9 +31,16 @@ function App() {
       )}
 
       {!editing && formData && (
-        <BasicInfo data={formData} onEdit={handleEdit} />
-      )}
+        <>
+          <BasicInfo data={formData} onEdit={handleEdit} />
+          <h2>experience</h2>
+          <h2>education</h2>
 
+          <button type="button" onClick={handleEdit} className="secondary">
+            Edit
+          </button>
+        </>
+      )}
     </>
   );
 }
